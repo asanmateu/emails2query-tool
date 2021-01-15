@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+import sys
 import re
 import os
 
@@ -8,7 +9,17 @@ input_path = current_path + "/input"
 output_path = current_path + "/output"
 
 os.chdir(input_path)
-df = pd.read_excel("emails2query_template.xls")
+
+try:
+    print("Reading and parsing template...")
+    df = pd.read_excel("emails2query_template.xlsx")
+
+except IndexError:
+    print("Please, make sure you use and .xlsx file that it is saved as Excel Workbook and NOT as "
+          "Strict Open XML Spreadsheet and try again.")
+    sys.exit()
+
+# Format null values to be easily manipulated
 df.replace('nan', np.nan, inplace=True)
 df.fillna("", inplace=True)
 
@@ -26,8 +37,12 @@ for i, row in df.iterrows():
         qf = "(" + str(row['retailer_id']) + "," + "''" + "," + "'" + email + "'" + ")" + ","
         emails_qf.append(qf)
 
-# New dataframe to input query ready emails
+# New DataFrame to input query ready emails
 query_df = pd.DataFrame(emails_qf, columns=['emails'])
 
 # Export file with query ready additional emails
-query_df.to_csv(output_path + "/emails2query_ready.csv")
+query_df.to_excel(output_path + "/emails2query_ready.xlsx")
+
+
+print("The file is ready, please check the output folder and grab the emails2query_ready.xlsx file in: ")
+print(output_path)
