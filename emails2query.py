@@ -16,7 +16,7 @@ try:
 
 except IndexError:
     print("Please, make sure you use and .xlsx file that it is saved as Excel Workbook and NOT as "
-          "Strict Open XML Spreadsheet and try again.")
+          "Strict Open XML Spreadsheet and try again. \n")
     sys.exit()
 
 # Format null values to be easily manipulated
