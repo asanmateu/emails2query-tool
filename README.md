@@ -11,7 +11,7 @@ A complex environment is not needed here as long as you got Python3, pandas, and
 Slack Toni if you are having issues with the installation process.
 
 
-## Instructions 📜
+## Instructions 📋
 
 1. Pull or download the zip for this package and place it wherever you want that you can easily navigate to later on to execute the script.
 
