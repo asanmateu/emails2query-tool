@@ -1,4 +1,4 @@
-# emails2query Tool (v2.0.0)
+# emails2query Tool (v2.0.1)
 
 This script takes a template with the columns retailer_id, additional_names, and additional_emails, and generates an excel file with each of the rows transforment in query-ready format.
 
