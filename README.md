@@ -17,7 +17,9 @@ An complex environment is not needed here as long as you got Python3, pandas, an
 	* **additional_emails**: additional emails concatenated by ";" (semicolon)
 
 
-**IMPORTANT: The tool does no magic so please make sure buyer names are set in the same order as their corresponding emails. Emails with no buyer names should go at the end.**
+**IMPORTANT: The tool does no magic so please make sure buyer names are set in the same order as their corresponding emails. Emails with no buyer names should go EITHER at the end OR otherwise you can write names as name1;;name3 (this will consider the value inside semicolons as "", in this case the only thing you need to make sure is that email2 has no buyer name for example. Normally, if you concatenate them in order and put a ";" in between, empty names will be already in ;; format.**
+
+**Please slack Toni if this is not 100% clear.**
 
 
 3. Place the **.xlsx** template, without changing its name, in the input directory. Make sure it's the only file there, and run the following commands on your terminal:
