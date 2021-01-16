@@ -54,7 +54,7 @@ The tool does no magic so please **make sure buyer names are set in the same ord
 
 **OR** 
 
-2. You can **write names as name1;;name3** (this will consider the value inside semicolons as "", in this case the only thing you need to make sure is that email2 has no buyer name, for example. Normally, if you concatenate them in the order given by additional columns 1, 2, 3... and put a ";" in between, empty names will be already in ;; format.
+2. You can **write names as name1;;name3** (this will consider the value inside semicolons as ""). In this case the only thing you need to make sure is that email2 has no buyer name, for example. Normally, if you concatenate them in the order given by additional columns 1, 2, 3... and put a ";" in between, empty names will be already in ;; format.
 
 
 You can concatenate both buyers and emails separately by copying all the additional buyer name / email column to a separate worksheet, use concatenate and then simply insert ";" between elements in the excel formula.
