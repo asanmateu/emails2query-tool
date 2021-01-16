@@ -1,10 +1,10 @@
 # emails2query Tool (v2.0.0)
 
-This script takes a template with the columns retailer_id, additional_names, and additional_emails, and generates an excel file with a all each of the rows transforment in query-ready format.
+This script takes a template with the columns retailer_id, additional_names, and additional_emails, and generates an excel file with each of the rows transforment in query-ready format.
 
 Follow python and conda environment installation from joor-cd-cleaner repository (if you need to): https://github.com/asanmateu/joor-cd-cleaner
 
-An complex environment is not needed here as long as you got Python3, pandas, and NumPy. Errors may occur if some excel packages are not installed. In this case set up the environment. Slack Toni if you are having issues with the installation process.
+A complex environment is not needed here as long as you got Python3, pandas, and NumPy. Errors may occur if some excel packages are not installed. In this case set up the environment or just follow the error an will tell you which ones are missing. It should even tell you what command to run (i.e., `conda install openpyxl`). Slack Toni if you are having issues with the installation process.
 
 ## Instructions
 
