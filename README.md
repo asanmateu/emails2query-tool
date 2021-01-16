@@ -48,7 +48,7 @@ $ python3 emails2query.py
 
 The tool does no magic so please **make sure buyer names are set in the same order as their corresponding emails**.
 
-**Emails with no buyer names should:
+**Emails with NO buyer names should:**
 
 1. Be **at the end** of the emails concatenation, so that they are not matched to a wrong name.
 
