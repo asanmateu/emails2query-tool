@@ -2,9 +2,9 @@
 
 This script takes a template with the columns retailer_id, additional_names, and additional_emails, and generates an excel file with a all each of the rows transforment in query-ready format.
 
-Follow python and conda environment installation from joor-cd-cleaner repository: https://github.com/asanmateu/joor-cd-cleaner
+Follow python and conda environment installation from joor-cd-cleaner repository (if you need to): https://github.com/asanmateu/joor-cd-cleaner
 
-
+An complex environment is not needed here as long as you got Python3, pandas, and NumPy. Errors may occur if some excel packages are not installed. In this case set up the environment. Slack Toni if you are having issues with the installation process.
 
 ## Instructions
 
