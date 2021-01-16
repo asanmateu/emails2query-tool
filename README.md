@@ -22,21 +22,10 @@ Slack Toni if you are having issues with the installation process.
 	* **additional_emails**: additional emails concatenated by ";" (semicolon)
 
 
-**IMPORTANT:**
-
-**The tool does no magic so please make sure buyer names are set in the same order as their corresponding emails.**
-
-**Emails with no buyer names should go EITHER at the end, so that they are not matched to a wrong name OR otherwise you can write names as name1;;name3 (this will consider the value inside semicolons as "", in this case the only thing you need to make sure is that email2 has no buyer name, for example. Normally, if you concatenate them in the order given by additional columns 1, 2, 3... and put a ";" in between, empty names will be already in ;; format.**
-
-**You can concatenate both buyers and emails separately by copying all the additional buyer name / email column to a separate worksheet, use concatenate and then simply insert ";" between elements in the excel formula.**
-
-**Please slack Toni if this is not 100% clear.**
-
-
 3. Place the **.xlsx** template, without changing its name, in the input directory. Make sure it's the only file there, and run the following commands on your terminal:
 
 ```
-# Activate the environment if you don't have the basic packages installed (pandas, numpy, and some excel readers if errors happen)
+# Activate the environment if you don't have the basic packages installed (pandas, numpy, and some excel readers: openpyxl, xlrd, or xlwt)
 
 $ conda activate cd-cleaner-conda-env
 
@@ -55,6 +44,24 @@ $ python3 emails2query.py
 5. Slack Toni if any issues.
 
 
-## Updates
+## Important Notes ⚠️
+
+The tool does no magic so please **make sure buyer names are set in the same order as their corresponding emails**.
+
+**Emails with no buyer names should:
+
+1. Be **at the end** of the emails concatenation, so that they are not matched to a wrong name.
+
+**OR** 
+
+2. You can **write names as name1;;name3** (this will consider the value inside semicolons as "", in this case the only thing you need to make sure is that email2 has no buyer name, for example. Normally, if you concatenate them in the order given by additional columns 1, 2, 3... and put a ";" in between, empty names will be already in ;; format.
+
+
+You can concatenate both buyers and emails separately by copying all the additional buyer name / email column to a separate worksheet, use concatenate and then simply insert ";" between elements in the excel formula.
+
+**Please slack Toni if this is not 100% clear.**
+
+
+## Updates 📡
 
 I will be updating the script when we review errors, please either pull from your IDE connecting to this remote repository or simply replace the tool folder with a new unzipped download of the repository. If additional **functionalities OR requirements** are added I will make it clear in a new section above instructions.
