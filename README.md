@@ -1,47 +1,47 @@
-# emails2query Script
+# emails2query Tool (v2.0.0)
 
-MAIN USE: split and stack concatenated additional emails with its corresponding retailer ID in query format.
+This script takes a template with the columns retailer_id, additional_names, and additional_emails, and generates an excel file with a all each of the rows transforment in query-ready format.
 
-
-This script takes a specific format template which is provided in the folder named exactly emails2query_template.xls and returns a .csv file with the data transformed into tuples ready for copy pasting into the "add_buyers_and_logins" query. MIND THE ENDING COMMA.
-
-This script can be used when additional emails require no name.
-
-You will different cases, judge by yourself if you might want to leave the first email to go with the connections and buyer name or if you want to add them all through query. If you want to add first one with the connections then parse it and then concat the rest again to use this template... Every case is different.
+Follow python and conda environment installation from joor-cd-cleaner repository: https://github.com/asanmateu/joor-cd-cleaner
 
 
 
-# INSTRUCTIONS 
+## Instructions
 
-=====================================================================================================================================
+1. Pull or download the zip for this package and place it wherever you want that you can easily navigate to later on to execute the script.
 
-### FIRST TIME:
+2. Fill in the template which you can find either on the input or template directories using the required fields.
 
-1. Place the file on Desktop.
-
-2. Install python3 and use pip/pip3/conda to setup an environment with numpy and pandas.
-
-
-=====================================================================================================================================
-
-### EVERYTIME YOU USE:
-
-1. Drop the specific template which is provided in the folder with .xls format and exact name in the input folder. MAKE SURE THERE IS ONLY ONE FILE AT A TIME.
-
-2. Open terminal, make sure you've activated the correct environment if you need to and run:
-
-	$ cd ~/Desktop/emails2query
-	$ python emails2query.py 
-	
-Note: do not include the dollar symbol this is just saying "terminal command"...
-
-3. A file should have been generated on the output folder which contains a column with the emails ready to copy and paste into query template. Check that the last comma is deleted so that it matches the format that the template requires.
-
-4. Make sure to remove templates from input and output to avoid confusion next time you use it as it can mess up results if theres several files in input especially.
-
-=====================================================================================================================================
+	* **retailer_id**: the corresponding id for the connection you are adding the additional names and emails to.
+	* **additional_names**: additional buyer names concatenate by ";" (semicolon)
+	* **additional_emails**: additional emails concatenated by ";" (semicolon)
 
 
-## NOTES
+**IMPORTANT: The tool does no magic so please make sure buyer names are set in the same order as their corresponding emails. Emails with no buyer names should go at the end.**
 
-There is a copy of the environment I use (file: .yml) in case you want to clone it although its faster to just set up your own since it's only NumPy and pandas you need and the version is pretty recent. Save the environment in the folder in case of major future updates on the packages.
+
+3. Place the **.xlsx** template, without changing its name, in the input directory. Make sure it's the only file there, and run the following commands on your terminal:
+
+```
+# Activate the environment if you don't have the basic packages installed (pandas, numpy, and some excel readers if errors happen)
+
+$ conda activate cd-cleaner-conda-env
+
+# Navigate to the folder with the script
+
+$ cd ~path/to/emails2query
+
+# Run the script
+
+$ python3 emails2query.py
+```
+
+4. If no errors are thrown then you should see a message directing you to check output folder for the file with the emails in query-ready format. Drag this file out to avoid confusion next time you use it, although it overwrites everytime so not to worry otherwise.
+
+
+5. Slack Toni if any issues.
+
+
+## Updates
+
+I will be updating the script when we review errors, please either pull from your IDE connecting to this remote repository or simply replace the tool folder with a new unzipped download of the repository. If additional functionalities are added I will make it clear in a new section above instructions.
