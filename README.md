@@ -44,4 +44,4 @@ $ python3 emails2query.py
 
 ## Updates
 
-I will be updating the script when we review errors, please either pull from your IDE connecting to this remote repository or simply replace the tool folder with a new unzipped download of the repository. If additional functionalities are added I will make it clear in a new section above instructions.
+I will be updating the script when we review errors, please either pull from your IDE connecting to this remote repository or simply replace the tool folder with a new unzipped download of the repository. If additional **functionalities OR requirements** are added I will make it clear in a new section above instructions.
