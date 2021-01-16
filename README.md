@@ -17,7 +17,13 @@ An complex environment is not needed here as long as you got Python3, pandas, an
 	* **additional_emails**: additional emails concatenated by ";" (semicolon)
 
 
-**IMPORTANT: The tool does no magic so please make sure buyer names are set in the same order as their corresponding emails. Emails with no buyer names should go EITHER at the end OR otherwise you can write names as name1;;name3 (this will consider the value inside semicolons as "", in this case the only thing you need to make sure is that email2 has no buyer name for example. Normally, if you concatenate them in order and put a ";" in between, empty names will be already in ;; format.**
+**IMPORTANT:**
+
+**The tool does no magic so please make sure buyer names are set in the same order as their corresponding emails.**
+
+**Emails with no buyer names should go EITHER at the end, so that they are not matched to a wrong name OR otherwise you can write names as name1;;name3 (this will consider the value inside semicolons as "", in this case the only thing you need to make sure is that email2 has no buyer name, for example. Normally, if you concatenate them in the order given by additional columns 1, 2, 3... and put a ";" in between, empty names will be already in ;; format.**
+
+**You can concatenate both buyers and emails separately by copying all the additional buyer name / email column to a separate worksheet, use concatenate and then simply insert ";" between elements in the excel formula.**
 
 **Please slack Toni if this is not 100% clear.**
 
