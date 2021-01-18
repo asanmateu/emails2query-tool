@@ -12,7 +12,7 @@ os.chdir(input_path)
 
 try:
     print("Reading and parsing template...")
-    df = pd.read_excel("emails2query_template.xlsx")
+    df = pd.read_excel("emails2query_template.xlsx", converters={'retailer_id': str})
 
 except IndexError:
     print("Error: make sure you use and .xlsx file that it is saved as Excel Workbook and NOT as "
