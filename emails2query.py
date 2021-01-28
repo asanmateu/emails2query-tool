@@ -48,11 +48,11 @@ try:
         buyer_emails_tuple_list = []
 
         # Pair emails and names even when buyer names are missing then use empty string...
-        for idx in range(len(emails)):
-            if idx <= len(buyers) - 1:
-                buyer_emails_tuple_list.append((buyers[idx], emails[idx]))
-            elif idx > len(buyers) - 1:
-                buyer_emails_tuple_list.append(("", emails[idx]))
+        for n in range(len(emails)):
+            if n <= len(buyers) - 1:
+                buyer_emails_tuple_list.append((buyers[n], emails[n]))
+            elif n > len(buyers) - 1:
+                buyer_emails_tuple_list.append(("", emails[n]))
 
         # Sub the value pairs on each tuple in buyer-emails tuple list into query format and append to overall list...
         for tup in buyer_emails_tuple_list:
