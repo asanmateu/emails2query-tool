@@ -1,10 +1,10 @@
 # emails2query Tool (v3.0.0)
 
-This script takes a template with the columns retailer_id, additional_names, and additional_emails, and generates an excel file with each of the rows transforment in query-ready format.
+This script takes a template with the columns retailer_id, additional_names, and additional_emails, and generates an excel file with each of the rows transformed into query-ready format.
 
 **Version 3.0.0**: Modular design to fit main source code.
 
-A complex environment is not needed here as long as you got Python3, pandas, and NumPy. Errors may occur if some excel packages are not installed. In this case set up the environment or just follow the error an will tell you which ones are missing. It should even tell you what command to run (i.e., `conda install openpyxl` or `pip3 install openpyxl` depending on your environment). 
+Only needs Python3, pandas, and NumPy. Errors may occur if some excel packages are not installed. In this case set up the environment or just follow the error an will tell you which ones are missing. It should even tell you what command to run (i.e., `conda install openpyxl` or `pip3 install openpyxl` depending on your environment). 
 
 
 ## Instructions 📋
@@ -39,7 +39,7 @@ $ python3 main.py
 
 ## Important Notes ⚠️
 
-The tool does no magic so please **make sure buyer names are set in the same order as their corresponding emails**.
+Please **make sure buyer names are set in the same order as their corresponding emails**.
 
 **Emails with NO buyer names should:**
 
@@ -52,10 +52,3 @@ The tool does no magic so please **make sure buyer names are set in the same ord
 You can have as many leading or ending ";" in the email concatenation since empty emails won't be included.
 
 You can concatenate both buyers and emails separately by copying all the additional buyer name / email column to a separate worksheet, use concatenate and then simply insert ";" between elements in the excel formula.
-
-**Please slack Toni if this is not 100% clear.**
-
-
-## Updates 📡
-
-I will be updating the script when we review errors, please either pull from your IDE connecting to this remote repository or simply replace the tool folder with a new unzipped download of the repository. If additional **functionalities OR requirements** are added I will make it clear in a new section above instructions.
