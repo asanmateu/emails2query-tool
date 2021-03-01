@@ -14,8 +14,8 @@ A complex environment is not needed here as long as you got Python3, pandas, and
 2. Fill in the template which you can find either on the input or template directories using the required fields.
 
 	* **retailer_id**: the corresponding id for the connection you are adding the additional names and emails to.
-	* **additional_names**: additional buyer names concatenate by ";" (semicolon)
-	* **additional_emails**: additional emails concatenated by ";" (semicolon)
+	* **additional_names**: additional buyer names concatenate by ";" (semicolon) or "," (comma)
+	* **additional_emails**: additional emails concatenated by any non alpha-numerical char.
 
 
 3. Place the **.xlsx** template, without changing its name, in the input directory. Make sure it's the only file there, and run the following commands on your terminal:
@@ -31,13 +31,10 @@ $ cd ~path/to/emails2query
 
 # Run the script
 
-$ python3 emails2query.py
+$ python3 main.py
 ```
 
 4. If no errors are thrown then you should see a message directing you to check output folder for the file with the emails in query-ready format. Drag this file out to avoid confusion next time you use it, although it overwrites everytime so not to worry otherwise.
-
-
-5. Slack Toni if any issues.
 
 
 ## Important Notes ⚠️
