@@ -1,12 +1,10 @@
-# emails2query Tool (v2.0.1)
+# emails2query Tool (v3.0.0)
 
 This script takes a template with the columns retailer_id, additional_names, and additional_emails, and generates an excel file with each of the rows transforment in query-ready format.
 
-**Version 2.0.0**: incorporates a new column with additional buyer names and parses them together with their respective email into query format.
+**Version 3.0.0**: Modular design to fit main source code.
 
 A complex environment is not needed here as long as you got Python3, pandas, and NumPy. Errors may occur if some excel packages are not installed. In this case set up the environment or just follow the error an will tell you which ones are missing. It should even tell you what command to run (i.e., `conda install openpyxl` or `pip3 install openpyxl` depending on your environment). 
-
-Slack Toni if you are having issues with the installation process.
 
 
 ## Instructions 📋
